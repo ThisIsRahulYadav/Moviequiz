@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gamebg"
+    android:orientation="vertical"
+    tools:context="com.rauniyargames.moviequiz.gameclasses.EmojiGameScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/setting" />
+
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/setting"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Movie Quiz"
+                android:textColor="#f8c300"
+                android:textSize="60dp"
+                android:shadowColor="#ece364"
+                android:shadowDx="+5"
+                android:shadowDy="+5"
+                android:shadowRadius="10"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/holly"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/homescreen_button_gradient"
+                android:shadowColor="#000"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"
+                android:text="hollywood"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/bolly"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/homescreen_button_gradient"
+                android:text="bollywood"
+                android:shadowColor="#000"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/setting_popup"
+        layout="@layout/setting_popup"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/help_popup"
+        layout="@layout/help_popup"
+        android:visibility="gone" />
+
+</RelativeLayout>
